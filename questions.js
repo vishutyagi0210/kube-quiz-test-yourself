@@ -64,18 +64,6 @@ const questions = [
   },
   {
     category: 'Introduction & Core Concepts',
-    question: 'Which analogy from your notes best matches Kubernetes?',
-    options: [
-      'A text editor',
-      'A central manager assigning delivery boys and replacing them if they fail',
-      'A static web page',
-      'A single virtual machine'
-    ],
-    answer: 1,
-    explanation: 'Your content compares Kubernetes to a central manager that assigns, tracks, and replaces delivery boys (containers).'
-  },
-  {
-    category: 'Introduction & Core Concepts',
     question: 'Which of the following is NOT a problem Kubernetes tries to solve?',
     options: [
       'Load balancing traffic across replicas',
@@ -85,18 +73,6 @@ const questions = [
     ],
     answer: 3,
     explanation: 'Kubernetes does not compile application code; it focuses on running and managing already built container images.'
-  },
-  {
-    category: 'Introduction & Core Concepts',
-    question: 'In the plant and sprinkler analogy, Kubernetes is compared to:',
-    options: [
-      'A plant',
-      'Manual watering using a single bucket',
-      'An automatic sprinkler system that waters many plants',
-      'A flower pot'
-    ],
-    answer: 2,
-    explanation: 'Kubernetes automates the management of many containers, similar to a sprinkler automating watering many plants.'
   },
   {
     category: 'Introduction & Core Concepts',
@@ -145,18 +121,6 @@ const questions = [
     ],
     answer: 2,
     explanation: 'Kubernetes always manages containers through Pods; it does not handle standalone containers directly.'
-  },
-  {
-    category: 'Introduction & Core Concepts',
-    question: 'In your analogy, a VM is compared to:',
-    options: [
-      'A shared lunch table',
-      'A single lunchbox',
-      'A whole house for one person',
-      'A delivery van'
-    ],
-    answer: 2,
-    explanation: 'The notes compare a VM to a whole house for one person, showing it is heavy and isolated.'
   },
   {
     category: 'Introduction & Core Concepts',
@@ -488,30 +452,6 @@ const questions = [
   },
   {
     category: 'Kubernetes Architecture',
-    question: 'In your notes, which analogy best describes the control plane?',
-    options: [
-      'The muscles',
-      'The warehouse',
-      'The brain',
-      'The lunchbox'
-    ],
-    answer: 2,
-    explanation: 'The control plane is described as the brain that decides and coordinates but does not do the physical work.'
-  },
-  {
-    category: 'Kubernetes Architecture',
-    question: 'In your analogy, worker nodes are best described as:',
-    options: [
-      'The brain',
-      'The muscles that do the work',
-      'The memory of the cluster',
-      'The filesystem'
-    ],
-    answer: 1,
-    explanation: 'Workers are the muscles that run pods and containers.'
-  },
-  {
-    category: 'Kubernetes Architecture',
     question: 'Which of these operations goes through the API server?',
     options: [
       'Running containers directly with Docker run',
@@ -533,18 +473,6 @@ const questions = [
     ],
     answer: 2,
     explanation: 'kubectl sends requests to the Kubernetes API server, which then interacts with other components.'
-  },
-  {
-    category: 'Kubernetes Architecture',
-    question: 'Which of the following is a correct statement from your important note?',
-    options: [
-      'kubectl and kube-proxy are the same',
-      'kubectl is for management, kube-proxy is for networking',
-      'kube-proxy is used only by administrators',
-      'kubectl forwards traffic to pods for external users'
-    ],
-    answer: 1,
-    explanation: 'Your notes explicitly call out kubectl as management and kube-proxy as networking for user traffic.'
   },
   {
     category: 'Kubernetes Architecture',
@@ -596,18 +524,6 @@ const questions = [
   },
   {
     category: 'Kubernetes Architecture',
-    question: 'The diagram in your notes shows each control plane and worker as:',
-    options: [
-      'A separate EC2 instance, VM, or physical machine',
-      'A separate Docker image only',
-      'A separate YAML file',
-      'A single process'
-    ],
-    answer: 0,
-    explanation: 'You mention that each box can be an EC2 instance, VM, or physical machine.'
-  },
-  {
-    category: 'Kubernetes Architecture',
     question: 'Which command line tool is used by developers to manage Kubernetes clusters?',
     options: [
       'kubectl',
@@ -641,18 +557,6 @@ const questions = [
     ],
     answer: 2,
     explanation: 'Workers host pods, which run application containers.'
-  },
-  {
-    category: 'Kubernetes Architecture',
-    question: 'Which of these best describes the access section in your architecture explanation?',
-    options: [
-      'It is about how storage is configured on nodes',
-      'It deals with kubectl and Services as access points',
-      'It explains only pod health',
-      'It configures the scheduler'
-    ],
-    answer: 1,
-    explanation: 'The access section covers kubectl for cluster management and Services for user access.'
   },
   {
     category: 'Kubernetes Architecture',
@@ -708,30 +612,6 @@ const questions = [
   // =========================
   {
     category: 'Cluster Setup & Tooling',
-    question: 'Which tool is described in your notes as giving full control and teaching how a real cluster is built?',
-    options: [
-      'Minikube',
-      'kubeadm',
-      'Docker Desktop',
-      'Helm'
-    ],
-    answer: 1,
-    explanation: 'kubeadm is compared to manual transmission driving and gives deep control over cluster setup.'
-  },
-  {
-    category: 'Cluster Setup & Tooling',
-    question: 'Which analogy is used for Minikube in your notes?',
-    options: [
-      'RC car track',
-      'Manual car on a highway',
-      'Scooter for practice',
-      'Bullet train'
-    ],
-    answer: 2,
-    explanation: 'Minikube is compared to a scooter: simple, lightweight, single node for learning.'
-  },
-  {
-    category: 'Cluster Setup & Tooling',
     question: 'Which tool creates Kubernetes clusters inside Docker containers?',
     options: [
       'kubeadm',
@@ -741,18 +621,6 @@ const questions = [
     ],
     answer: 2,
     explanation: 'Kind stands for Kubernetes in Docker and creates clusters using Docker containers as nodes.'
-  },
-  {
-    category: 'Cluster Setup & Tooling',
-    question: 'Which type of cluster is best described as "actual highways" in your notes?',
-    options: [
-      'Minikube',
-      'kubeadm on bare metal',
-      'kind',
-      'Managed clusters like EKS, AKS, GKE'
-    ],
-    answer: 3,
-    explanation: 'Cloud managed services such as EKS, AKS, and GKE are compared to real highways.'
   },
   {
     category: 'Cluster Setup & Tooling',
@@ -780,18 +648,6 @@ const questions = [
   },
   {
     category: 'Cluster Setup & Tooling',
-    question: 'According to your notes, what is the minimum recommended RAM for running Kind locally on a laptop?',
-    options: [
-      '2 GB',
-      '4 GB',
-      '8 GB',
-      '16 GB'
-    ],
-    answer: 2,
-    explanation: 'You mention that if the laptop has 8 GB RAM, you can run Kind locally.'
-  },
-  {
-    category: 'Cluster Setup & Tooling',
     question: 'Which combination of tools is required in your hands on Kind setup?',
     options: [
       'Docker, kind, kubectl',
@@ -816,18 +672,6 @@ const questions = [
   },
   {
     category: 'Cluster Setup & Tooling',
-    question: 'Why might you choose a cloud VM instead of your laptop to run Kind?',
-    options: [
-      'Because Kind does not support macOS',
-      'Because Windows Home or low resources may struggle with Docker and Kind',
-      'Because kubectl only works on the cloud',
-      'Because Pods require cloud load balancers'
-    ],
-    answer: 1,
-    explanation: 'Your notes suggest using a cloud VM if the laptop is slow or limited, especially on certain OS versions.'
-  },
-  {
-    category: 'Cluster Setup & Tooling',
     question: 'In the Kind cluster YAML, what does the role field specify?',
     options: [
       'The pod name',
@@ -849,30 +693,6 @@ const questions = [
     ],
     answer: 1,
     explanation: 'extraPortMappings expose specific ports from the Kind node container to the host so you can access services.'
-  },
-  {
-    category: 'Cluster Setup & Tooling',
-    question: 'In your Kind configuration, why is mapping port 80 and 443 important?',
-    options: [
-      'They are used by kubectl',
-      'They are default ports for HTTP and HTTPS access to applications',
-      'They are required for container runtime',
-      'They are used to access etcd'
-    ],
-    answer: 1,
-    explanation: 'HTTP and HTTPS typically use ports 80 and 443, so mapping them allows easy access to web applications.'
-  },
-  {
-    category: 'Cluster Setup & Tooling',
-    question: 'Which statement about managed Kubernetes services like EKS and AKS is true?',
-    options: [
-      'They remove the need for nodes',
-      'They fully manage the control plane for you',
-      'They do not support scaling',
-      'They replace kubectl'
-    ],
-    answer: 1,
-    explanation: 'Managed services usually handle control plane provisioning and upgrades, while you manage worker nodes and workloads.'
   },
   {
     category: 'Cluster Setup & Tooling',
@@ -921,30 +741,6 @@ const questions = [
     ],
     answer: 1,
     explanation: 'Each node in a Kind cluster is a Docker container, so docker ps lists them.'
-  },
-  {
-    category: 'Cluster Setup & Tooling',
-    question: 'According to your notes, which of the following is a minimum VM spec suggestion for running a local cluster?',
-    options: [
-      '1 vCPU, 1 GB RAM',
-      '2 vCPU, 4 GB RAM, 20 GB disk',
-      '8 vCPU, 64 GB RAM, 1 TB disk',
-      'No specific specs are needed'
-    ],
-    answer: 1,
-    explanation: 'You suggest a minimum of 2 vCPUs, 4 GB RAM, and 20 GB disk for a VM.'
-  },
-  {
-    category: 'Cluster Setup & Tooling',
-    question: 'Which of the following best matches your driving practice analogy?',
-    options: [
-      'kubeadm equals toy car; minikube equals highway',
-      'minikube equals toy track; kind equals scooter',
-      'kubeadm equals manual car; minikube equals scooter; kind equals RC track; EKS/AKS/GKE equals real highways',
-      'All tools are equivalent in the analogy'
-    ],
-    answer: 2,
-    explanation: 'You map kubeadm to manual car, minikube to scooter, kind to RC track, and managed services to real highways.'
   },
   {
     category: 'Cluster Setup & Tooling',
@@ -1108,7 +904,7 @@ const questions = [
   },
   {
     category: 'Workloads: Namespaces, Pods, Deployments',
-    question: 'In Kind or Minikube clusters, what is local-path-storage used for?',
+    question: 'In Kind clusters, what is local-path-storage used for?',
     options: [
       'Network policies',
       'Node labels',
@@ -1144,18 +940,6 @@ const questions = [
   },
   {
     category: 'Workloads: Namespaces, Pods, Deployments',
-    question: 'In your notes there is a typo in the namespace YAML kind. What is the correct value?',
-    options: [
-      'nameapce',
-      'namespace',
-      'Namespace',
-      'name-space'
-    ],
-    answer: 2,
-    explanation: 'The correct value is kind: Namespace with proper capitalization.'
-  },
-  {
-    category: 'Workloads: Namespaces, Pods, Deployments',
     question: 'Which field in a Pod spec specifies the namespace where the Pod will be created?',
     options: [
       'spec.namespace',
@@ -1165,18 +949,6 @@ const questions = [
     ],
     answer: 2,
     explanation: 'The metadata.namespace field determines which namespace the object belongs to.'
-  },
-  {
-    category: 'Workloads: Namespaces, Pods, Deployments',
-    question: 'In the NGINX pod example, which container image is used?',
-    options: [
-      'nginx:stable',
-      'nginx:alpine',
-      'nginx:latest',
-      'nginx:1.10'
-    ],
-    answer: 2,
-    explanation: 'Your example uses image: nginx:latest.'
   },
   {
     category: 'Workloads: Namespaces, Pods, Deployments',
@@ -1300,30 +1072,6 @@ const questions = [
   },
   {
     category: 'Workloads: Namespaces, Pods, Deployments',
-    question: 'In the nginx Deployment example, how many replicas are requested?',
-    options: [
-      '1',
-      '2',
-      '3',
-      '5'
-    ],
-    answer: 1,
-    explanation: 'The example sets replicas: 2.'
-  },
-  {
-    category: 'Workloads: Namespaces, Pods, Deployments',
-    question: 'Which combination of labels connects the Deployment and its Pods in your example?',
-    options: [
-      'metadata.name only',
-      'selector.matchLabels and template.metadata.labels both using app: nginx',
-      'namespace name only',
-      'pod IP address'
-    ],
-    answer: 1,
-    explanation: 'The selector and template labels both use app: nginx to associate pods with the Deployment.'
-  },
-  {
-    category: 'Workloads: Namespaces, Pods, Deployments',
     question: 'Which command scales the nginx Deployment to 5 replicas in your example?',
     options: [
       'kubectl scale deployment nginx-deployment --replicas=5',
@@ -1348,18 +1096,6 @@ const questions = [
   },
   {
     category: 'Workloads: Namespaces, Pods, Deployments',
-    question: 'Which command shows the rollout status of a Deployment?',
-    options: [
-      'kubectl rollout status deployment/nginx-deployment -n nginx',
-      'kubectl status deployment/nginx-deployment -n nginx',
-      'kubectl get rollout nginx-deployment -n nginx',
-      'kubectl list rollout nginx-deployment -n nginx'
-    ],
-    answer: 0,
-    explanation: 'kubectl rollout status is used to check rollout progress.'
-  },
-  {
-    category: 'Workloads: Namespaces, Pods, Deployments',
     question: 'Which command rolls back a Deployment to the previous version?',
     options: [
       'kubectl rollback deployment/nginx-deployment',
@@ -1369,18 +1105,6 @@ const questions = [
     ],
     answer: 1,
     explanation: 'kubectl rollout undo reverts to the previous ReplicaSet.'
-  },
-  {
-    category: 'Workloads: Namespaces, Pods, Deployments',
-    question: 'Which of the following is an appropriate exercise from your notes to deepen understanding?',
-    options: [
-      'Create a ConfigMap with no data',
-      'Create a ReplicaSet YAML with 3 replicas of nginx',
-      'Only run kubectl get nodes',
-      'Only edit kubeconfig'
-    ],
-    answer: 1,
-    explanation: 'One of the suggested exercises is to create a ReplicaSet YAML with 3 nginx replicas.'
   },
 
   // =========================
