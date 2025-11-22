@@ -1220,18 +1220,6 @@ const questions = [
   },
   {
     category: 'Services & Networking',
-    question: 'Which command from your notes forwards local port 8080 to port 80 of nginx-service in the nginx namespace?',
-    options: [
-      'kubectl proxy service/nginx-service 8080:80 -n nginx',
-      'kubectl connect service/nginx-service 8080:80 -n nginx',
-      'kubectl port-forward service/nginx-service -n nginx 8080:80 --address=0.0.0.0',
-      'kubectl tunnel service/nginx-service 8080:80 -n nginx'
-    ],
-    answer: 2,
-    explanation: 'You use kubectl port-forward with service/nginx-service -n nginx 8080:80 in the notes.'
-  },
-  {
-    category: 'Services & Networking',
     question: 'Why might you need sudo -E with port forwarding to use a low port?',
     options: [
       'Because kubectl requires root for all operations',
@@ -1241,42 +1229,6 @@ const questions = [
     ],
     answer: 1,
     explanation: 'Ports less than 1024 are privileged and binding to them often requires elevated permissions.'
-  },
-  {
-    category: 'Services & Networking',
-    question: 'After port forwarding with kubectl, how can users access your NGINX application on an EC2 instance?',
-    options: [
-      'By connecting to the node internal IP on port 80 only',
-      'By using ssh without port',
-      'By using http://<EC2_PUBLIC_IP>:8080 in the browser',
-      'By using kubectl logs'
-    ],
-    answer: 2,
-    explanation: 'Port forwarding exposes the Service on the host at the given port, which can be reached via the EC2 public IP.'
-  },
-  {
-    category: 'Services & Networking',
-    question: 'Which of the following correctly describes the flow of traffic in your example?',
-    options: [
-      'User -> Pod -> Service -> Container',
-      'User -> Service -> Pod -> Container',
-      'User -> Node -> etcd -> Pod',
-      'User -> API server -> controller manager'
-    ],
-    answer: 1,
-    explanation: 'Traffic flows from user to Service, then to pods and containers.'
-  },
-  {
-    category: 'Services & Networking',
-    question: 'In your notes, Services are described as what in the context of pods?',
-    options: [
-      'Log collectors',
-      'Stable doors that always point to the correct pods',
-      'Storage volumes',
-      'Schedulers'
-    ],
-    answer: 1,
-    explanation: 'You use the analogy of a fixed door that always points to the right pods.'
   },
   {
     category: 'Services & Networking',
